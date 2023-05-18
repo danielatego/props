@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Jokes from "./components/jokes";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+return(
+    <>
+        <Jokes
+        number='1'
+        setup='I got my daughter a fridge for her birthday.'
+        punchline="I can't wait to see her face light up when she opens it."/>
+        <Jokes
+        number='2'
+        setup='How did the hacker escape the police?'
+        punchline='He just ransomware'/>
+        <Jokes
+        number='3'
+        setup="Why don't pirates travel on mountain roads"
+        punchline='Scurvy'/>
+        <Jokes
+        number='4'
+        setup='Why do bees stay in the hive in the winter'
+        punchline='Swarm'/>
+        <Jokes
+        number='5'
+        setup="What's the best thing about Switzerland"
+        punchline='I do not know but the flag is a big plus'/>
+        <Jokes
+        number='6'
+        setup='What did the cow say to the farmer on the cold winter morning?'
+        punchline='Thanks for the warm hands'/>
+
+    </>
+)
 }
-
-export default App;
