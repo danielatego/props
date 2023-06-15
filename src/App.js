@@ -1,9 +1,23 @@
 import Jokes from "./components/jokes";
+import data from "./jokesData"
 
 export default function App(){
+    const jokesListView = data.map(joke=>{
+        return(
+            <Jokes number={joke.Number} 
+                    setup= {joke.Setup}
+                    punchline ={joke.Punchline}
+            />
+            )
+    })
 return(
     <>
-        <Jokes
+        {jokesListView}
+    </>
+)
+}
+
+/* <Jokes
         number='1'
         setup='I got my daughter a fridge for her birthday.'
         punchline="I can't wait to see her face light up when she opens it."/>
@@ -26,8 +40,4 @@ return(
         <Jokes
         number='6'
         setup='What did the cow say to the farmer on the cold winter morning?'
-        punchline='Thanks for the warm hands'/>
-
-    </>
-)
-}
+        punchline='Thanks for the warm hands'/> */
