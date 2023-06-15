@@ -7,6 +7,7 @@ export default function App(){
             <Jokes number={joke.Number} 
                     setup= {joke.Setup}
                     punchline ={joke.Punchline}
+                    key = {joke.Number}
             />
             )
     })
