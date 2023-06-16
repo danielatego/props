@@ -1,20 +1,26 @@
 import Jokes from "./components/jokes";
 import data from "./jokesData"
-
+import React from "react";
 export default function App(){
-    const jokesListView = data.map(joke=>{
-        return(
-            <Jokes number={joke.Number} 
-                    setup= {joke.Setup}
-                    punchline ={joke.Punchline}
-                    key = {joke.Number}
-            />
-            )
-    })
+    const [messages, setMessages]= React.useState([])
+    // const jokesListView = data.map(joke=>{
+    //     return(
+    //         <Jokes number={joke.Number} 
+    //                 setup= {joke.Setup}
+    //                 punchline ={joke.Punchline}
+    //                 key = {joke.Number}
+    //         />
+    //         )
+    // })
 return(
-    <>
-        {jokesListView}
-    </>
+    <div>
+        {messages.length>0 && <h1>
+            You have {messages.length} unread messages!
+        </h1>}
+    </div>
+    // <>
+    //     {jokesListView}
+    // </>
 )
 }
 
